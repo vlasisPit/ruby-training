@@ -53,4 +53,17 @@ rescue ArgumentError
   puts "Requires two arguments"
 end
 
+begin
+  1 / 0
+rescue ZeroDivisionError => e
+  puts "#{e.class} handled"
+rescue => e
+  puts "#{e.class} handled"
+end
 
+=begin
+Exception#class
+Exception#message
+Exception#backtrace  -> returns path of the code
+Exception#ful_message -> combines class, message and backtrace
+=end
